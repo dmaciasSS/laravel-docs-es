@@ -1,28 +1,28 @@
 # Views
 
-- [Basic Usage](#basic-usage)
+- [Uso](#uso)
 - [View Composers](#view-composers)
 
-<a name="basic-usage"></a>
-## Basic Usage
+<a name="uso"></a>
+## Uso
 
-Views contain the HTML served by your application, and serve as a convenient method of separating your controller and domain logic from your presentation logic. Views are stored in the `resources/views` directory.
+Vistas contiene el HTML servido por tu aplicación y sirve como un conveniente metodo de separar tu controlador y logica de dominio de to logica de presentación. Vistas se guardan dentro el directorio 'resources/view'.
 
-A simple view looks like this:
+Una simple vista se ve asi:
 
-	<!-- View stored in resources/views/greeting.php -->
+	<!-- Vista guardada dento de resources/views/saludo.php -->
 
 	<html>
 		<body>
-			<h1>Hello, <?php echo $name; ?></h1>
+			<h1>Hola, <?php echo $nombre; ?></h1>
 		</body>
 	</html>
 
-The view may be returned to the browser like so:
+La vista puede ser regresada ha tu navegador de web de esta forma:
 
 	Route::get('/', function()
 	{
-		return view('greeting', ['name' => 'James']);
+		return view('saludo', ['nombre' => 'Jaime']);
 	});
 
 As you can see, the first argument passed to the `view` helper corresponds to the name of the view file in the `resources/views` directory. The second argument passed to helper is an array of data that should be made available to the view.
