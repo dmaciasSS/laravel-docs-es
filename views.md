@@ -10,7 +10,7 @@ Vistas contiene el HTML servido por tu aplicación y sirve como un conveniente m
 
 Una simple vista se ve asi:
 
-	<!-- Vista guardada dento de resources/views/saludo.php -->
+	<!-- Vista guardada dentro de resources/views/saludo.php -->
 
 	<html>
 		<body>
