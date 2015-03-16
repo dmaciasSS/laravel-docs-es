@@ -25,25 +25,27 @@ La vista puede ser regresada ha tu navegador de web de esta forma:
 		return view('saludo', ['nombre' => 'Jaime']);
 	});
 
-As you can see, the first argument passed to the `view` helper corresponds to the name of the view file in the `resources/views` directory. The second argument passed to helper is an array of data that should be made available to the view.
+Como puedes ver el primer argumento pasado al metodo de ayuda de `view` corresponde al nombre del archivo de la vista en el directorio `resources/views`. El segundo argumento pasado al metodo de ayuda es una matriz de datos que esta disponible ha la vista.
 
-Of course, views may also be nested within sub-directories of the `resources/views` directory. For example, if your view is stored at `resources/views/admin/profile.php`, it should be returned like so:
+Por supuesto vistas tambien pueden ser encadenadas en un subdirectorio en el directorio `resources/views`. Por ejemplo, si tu vista esta archivada en `resources/views/admin/perfil.php`, debe regresar asi:
 
-	return view('admin.profile', $data);
+	return view('admin.perfil', $data);
 
-#### Passing Data To Views
+#### Pasando Datos A Vistas
 
-	// Using conventional approach
-	$view = view('greeting')->with('name', 'Victoria');
+	// Usando convención normal
+	$view = view('saludo')->with('nombre', 'Victoria');
 
-	// Using Magic Methods
-	$view = view('greeting')->withName('Victoria');
+	// Usando Metodo Magico
+	$view = view('saludo')->withNombre('Victoria');
 
+En el ejemplo de arriva, la variable `$nombre` se le da ha aceder a la vista y contineu `Victoria`.
 In the example above, the variable `$name` is made accessible to the view and contains `Victoria`.
 
+Si deseas, puedes pasard una matriz de datos como el segundo parametro al metod de ayuda de `view`
 If you wish, you may pass an array of data as the second parameter to the `view` helper:
 
-	$view = view('greetings', $data);
+	$view = view('saludo', $data);
 
 #### Sharing Data With All Views
 
