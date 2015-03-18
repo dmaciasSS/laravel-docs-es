@@ -42,13 +42,15 @@ Por supuesto vistas tambien pueden ser encadenadas en un subdirectorio en el dir
 En el ejemplo de arriva, la variable `$nombre` se le da ha aceder a la vista y contineu `Victoria`.
 In the example above, the variable `$name` is made accessible to the view and contains `Victoria`.
 
-Si deseas, puedes pasard una matriz de datos como el segundo parametro al metod de ayuda de `view`
+Si deseas, puedes pasard una matriz de datos como el segundo parametro al meto de ayuda de `view`:
 If you wish, you may pass an array of data as the second parameter to the `view` helper:
 
 	$view = view('saludo', $data);
 
+#### Pasando Datos Con Todas Las Vistas
 #### Sharing Data With All Views
 
+Ocasionalment, tu puedes necesitar pasar un dato con tus vistas que rinden t aplicacion. Tienes varias opciones:
 Occasionally, you may need to share a piece of data with all views that are rendered by your application. You have several options: the `view` helper, the `Illuminate\Contracts\View\Factory` [contract](/5.0/contracts), or a wildcard [view composer](#view-composers).
 
 For example, using the `view` helper:
